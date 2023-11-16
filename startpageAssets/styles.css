@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Inconsolata";
+    src: local("Inconsolata"),
+         url("./Inconsolata.ttf") format("truetype");
+}
+:root {
+    --primary: #F8F2B0;
+    --secondary: #35331E;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-family: 'Inconsolata';
+    font-weight: 700;
+    background-color: var(--primary);
+    color: var(--secondary);
+    font-size: 1.6rem;
+    padding-top: 104px;
+    overflow-x: hidden;
+}
+a:hover, a:focus {
+    text-decoration: underline dotted;
+}
+.wrapper {
+    max-width: 911px;
+    margin: 0 auto;
+}
+.img {
+    width: 219px;
+    margin-left: auto;
+    display: block;
+    margin-top: 32px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 200px);
+    gap: 37px;
+    justify-content: center;
+}
+.category {
+    text-transform: capitalize;
+}
+.category-title-container {
+    max-width: 200px;
+    border: 4px inset #D3CE97;
+    padding: 6px 0;
+    margin-bottom: 16px;
+}
+.category__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-align: center;
+}
+.category__ul {
+    padding: 0 16px;
+}
+.category__li {
+    margin-bottom: 6px;
+}
+@media screen and (min-width: 900px) {
+    body {
+        font-size: 1.4rem;
+    }
+    .category__title {
+        font-size: 1.6rem;
+    }
+    .img {
+        width: 238px;
+        margin: 0px;
+        position: absolute;
+        right: 50px;
+        bottom: 25px;
+    }
+}
+@media screen and (min-width: 1440px) {
+    body {
+        font-size: 1.6rem;
+    }
+    .wrapper {
+        max-width: 1022px;
+    }
+    .category__title {
+        font-size: 1.8rem;
+    }
+    .grid {
+        column-gap: 74px;
+    }
+}
