@@ -17,9 +17,16 @@ window.addEventListener('DOMContentLoaded', () => {
 
     function updateClock() {
         let currentTime = new Date();
+        let hours = currentTime.getHours();
+        let minutes = currentTime.getMinutes();
+        let seconds = currentTime.getSeconds();
 
-        hourHandNode.style.transform = `translate(-50%) rotate(${(currentTime.getHours() * 30) + currentTime.getMinutes() / 2 }deg)`;
-        minuteHandNode.style.transform = `translate(-50%) rotate(${currentTime.getMinutes() * 6}deg)`;
-        secondHandNode.style.transform = `translate(-50%) rotate(${currentTime.getSeconds() * 6}deg)`;
+        hourHandNode.style.transform = `translate(-50%) rotate(${(hours * 30) + minutes / 2 }deg)`;
+        minuteHandNode.style.transform = `translate(-50%) rotate(${minutes * 6}deg)`;
+        secondHandNode.style.transform = `translate(-50%) rotate(${seconds * 6}deg)`;
+
+        let title = `${hours < 10 ? `0${hours}` : hours}:${minutes < 10 ? `0${minutes}` : minutes}:${seconds < 10 ? `0${seconds}` : seconds}`;
+
+        document.title = title;
     }
 });
