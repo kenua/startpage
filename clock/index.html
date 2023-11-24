@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>[CURRENT_TIME]</title>
+    <link rel="stylesheet" href="./assets/styles.css">
+    <script src="./assets/clock.js" defer></script>
+</head>
+<body>
+    <div class="current-time">
+        <div class="date">
+            <h1 id="day">[DAY]</h1>
+            <h2 id="month-year">[MON] [YEAR]</h2>
+        </div>
+        <div class="clock-wrapper">
+            <div class="clock-wrapper__inner-line">
+                <div class="clock">
+                    <div id="hour" class="clock-hand-container">
+                        <div class="clock__hand clock__hand--hour"></div>
+                    </div>
+                    <div id="minute" class="clock-hand-container">
+                        <div class="clock__hand clock__hand--minute"></div>
+                    </div>
+                    <div id="second" class="clock-hand-container">
+                        <div class="clock__hand clock__hand--second"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
